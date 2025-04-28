@@ -3,24 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Sen:wght@400..800&display=swap"
+          rel="stylesheet">
     <title>Login</title>
-    <link rel="stylesheet" href="./stylesheets/auth.css">
+    <link rel="stylesheet" href="./stylesheets/login.css">
 </head>
 <body>
 <div class="form-container">
-    <h1>Login</h1>
-
+    <h1>SIGN IN</h1>
     <% if (error) { %>
         <p class="error"><%= error %></p>
     <% } %>
-
-    <form action="/login" method="POST">
+    <form class="login-form" action="/login" method="POST">
         <input type="email" name="email" placeholder="Email" required>
         <input type="password" name="password" placeholder="Password" required>
-        <button type="submit">Login</button>
+        <button type="submit">Sign In</button>
     </form>
-
     <p>Don't have an account? <a href="/register">Register here</a>.</p>
+    <div class="social-links">
+        <div class="social-link">
+            <p>© 2023</p>
+            <a href="/register">Twitter </a>
+            <a href="/register">LinkedIn </a>
+            <a href="/register">Email </a>
+            <a href="/register">RSS feed </a>
+            <a href="/register">Add to Feedly </a>
+        </div>
+    </div>
 </div>
+
 </body>
 </html>
