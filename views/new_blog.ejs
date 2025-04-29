@@ -4,20 +4,36 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>The Blog | New Blog</title>
-    <link rel="stylesheet" href="/stylesheets/new_blog.css">
+    <link rel="stylesheet" href="/stylesheets/newblog.css">
 </head>
 <body>
+<header class="header">
+    <nav class="navbar">
+        <ul class="nav-parent">
+            <li><a href="/register"></a>Blog</li>
+            <li><a href="/register"></a>Projects</li>
+            <li><a href="/register"></a>About</li>
+            <li><a href="/login"></a>Newsletter</li>
+        </ul>
+    </nav>
+</header>
 <div class="container">
-    <h2>New Blog</h2>
+    <h1>NEW POST</h1>
     <% if (error) { %>
         <p class="error-message"><%= error %></p>
     <% } %>
     <form class="blog-form" action="/blogs/new" method="post">
-        <label for="title">Title</label>
-        <input type="text" name="title" placeholder="Title">
-        <label for="content">Content</label>
-        <textarea name="content" placeholder="Content"></textarea>
-        <button class="btn" type="submit">Submit</button>
+        <input type="text" name="blog-title" placeholder="Blog Title">
+        <input type="text" name="description" placeholder="Description">
+        <ul class="nav-parent">
+            <li><a href="/register"></a>Software Development</li>
+            <li><a href="/register"></a>Tools</li>
+            <li><a href="/register"></a>SaaS</li>
+            <li><a href="/login"></a>Podcasts</li>
+            <li><a href="/login"></a>Customer Success</li>
+        </ul>
+        <textarea name="content" placeholder="Message"></textarea>
+        <button class="btn" type="submit">Send Message</button>
     </form>
 </div>
 </body>
